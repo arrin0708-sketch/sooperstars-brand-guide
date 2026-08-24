@@ -23,3 +23,14 @@
 
 /* Downloadable logo cards */
 .logo-card{display:block;color:var(--ink);text-decoration:none;cursor:pointer;transition:box-shadow .16s ease,transform .16s ease}.logo-card:hover{box-shadow:0 0 0 1.6px rgba(0,173,245,.35)}.logo-card:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+
+/* CMYK print guide heading */
+.guide-pane h3.cmyk-guide-title{color:#525661;font-weight:600}
+
+/* Character card typography */
+.char-card-name{line-height:28px}
+.char-card-info{gap:4px}
+.char-card-emotion{line-height:22px}
+
+/* Character detail emotion label */
+.identity b{height:45px}

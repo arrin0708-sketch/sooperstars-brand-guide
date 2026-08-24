@@ -7,8 +7,12 @@ const CHARACTERS=[
  {id:'kuljam',name:'꿀잼',en:'Kuljam',emotion:'도파민',bg:'#FFF9E2',pos:'-1022px -247px',lead:'재미있는 순간을 절대 놓치지 않는 도파민 수집가.',personality:'언제나 웃음과 재미를 찾아다니며 평범한 순간도 콘텐츠로 바꾸는 재주가 있다.',speech:['이거 완전 꿀잼 각인데?','한 번만 더!'],service:'웃음·재미 리액션\n콘텐츠 하이라이트 캐릭터',memes:['#꿀잼보장','#도파민','#한번더'],cmyk:[['노란색',0,12,90,0],['빨간색',0,88,80,0]]},
  {id:'yeongja',name:'영자',en:'Yeongja',emotion:'묵묵함',bg:'#EEF6FF',pos:'-1157px -247px',lead:'말보다 행동으로 보여주는 수퍼스타즈의 든든한 중심.',personality:'조용하지만 늘 곁을 지키며 결정적인 순간에 팀을 이끄는 믿음직한 캐릭터.',speech:['…좋아. 시작하자.','내가 옆에 있을게.'],service:'묵묵한 응원 리액션\n브랜드 심볼 캐릭터',memes:['#묵묵함','#든든한영자','#중심'],cmyk:[['파란색',80,30,0,0]]}
 ];
+const ENGLISH_NAMES={baekhogu:'BECKHOGU',gogo:'GOGO',saida:'CYDAR',deoldol:'DEOLDEOL',narak:'NARAKI',kuljam:'COOLZAM',yeongja:'YOUNGJA'};
+CHARACTERS.forEach(character=>{character.en=ENGLISH_NAMES[character.id]});
 const grid=document.querySelector('#characterGrid');let selected=1;
 const CARD_STROKES={baekhogu:'#2E81F8',gogo:'#00ADF5',saida:'#797979',deoldol:'#FA7676',narak:'#FF9564',kuljam:'#F39D13',yeongja:'#5B99FF'};
+const badgeElement=document.querySelector('#charBadge');
+new MutationObserver(()=>{const character=CHARACTERS.find(item=>item.emotion===badgeElement.textContent);if(character)badgeElement.style.backgroundColor=CARD_STROKES[character.id]}).observe(badgeElement,{childList:true});
 function cmykRgb(c,m,y,k){return `rgb(${Math.round(255*(1-c/100)*(1-k/100))},${Math.round(255*(1-m/100)*(1-k/100))},${Math.round(255*(1-y/100)*(1-k/100))})`}
 function imagePath(c){return `2D_${c.name}.png`}
 function downloadAssets(c){
