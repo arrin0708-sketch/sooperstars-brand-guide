@@ -8,30 +8,41 @@
 .nav-btn{font-family:"Pretendard Variable",Pretendard,Arial,sans-serif;font-size:16px;font-weight:700;line-height:1;letter-spacing:-.02em}
 
 /* Character guide tabs */
+.identity{margin-bottom:18px}
+.identity h2{font-size:48px}
+.guide-tabs{gap:32px}
 .guide-tab{font-family:"Pretendard Variable",Pretendard,Arial,sans-serif;font-size:18px;font-weight:700;line-height:1;letter-spacing:-.02em}
+.lead{font-family:"Pretendard Variable",Pretendard,Arial,sans-serif;font-size:18px;font-weight:500;line-height:1.55;margin-top:24px;margin-bottom:40px}
 
 /* Character-specific selected stroke */
 .char-card:hover{border-color:color-mix(in srgb,var(--stroke) 30%,transparent)}
 .char-card.active{border-color:var(--stroke)}
 
 /* Download button icon */
-.asset-btn:before{content:"";width:24px;height:24px;flex:0 0 24px;background:url("icoDownload.svg") center/24px 24px no-repeat}
+.asset-btn:before{content:"";width:24px;height:24px;flex:0 0 24px;background:url("assets/icoDownload.svg") center/24px 24px no-repeat}
 
 /* Library content to footer spacing */
 #library .logo-section{padding-bottom:200px}
 @media(max-width:720px){#library .logo-section{padding-bottom:96px}}
 
 /* Downloadable logo cards */
-.logo-card{display:block;color:var(--ink);text-decoration:none;cursor:pointer;transition:box-shadow .16s ease,transform .16s ease}.logo-card:hover{box-shadow:0 0 0 1.6px rgba(0,173,245,.35)}.logo-card:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+.logo-card{display:block;color:var(--ink);text-decoration:none;cursor:pointer;transition:box-shadow .16s ease,transform .16s ease}.logo-card:hover{box-shadow:0 0 0 1.6px #d9d9d9}.logo-card:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
 
 /* CMYK print guide heading */
 .brand img{width:160px;height:auto;aspect-ratio:185/21;object-fit:contain}
 .guide-pane h3.cmyk-guide-title{color:#525661;font-weight:600}
 
-/* Character card typography */
+/* Character card name height */
 .char-card-name{line-height:28px}
+
+/* Character card name and emotion spacing */
 .char-card-info{gap:4px}
 .char-card-emotion{line-height:22px}
 
 /* Character detail emotion label */
 .identity b{height:45px}
+
+/* Policy */
+.policy-section{padding-bottom:160px}.policy-heading{margin-bottom:88px}.policy-tabs,.policy-pane{width:100%;max-width:none;margin-left:0;margin-right:0}.policy-tabs{height:48px;display:flex;gap:36px;border-bottom:2px solid #eceef2}.policy-tab{height:48px;padding:0;border:0;background:none;color:#9aa3b2;font:700 16px/1 "Pretendard Variable",Pretendard,Arial,sans-serif;cursor:pointer}.policy-tab.active{color:var(--ink);border-bottom:2px solid var(--ink)}.policy-pane{display:none;padding-top:56px}.policy-pane.active{display:block}.policy-copy{width:100%;color:#626875;font-family:"Pretendard Variable",Pretendard,Arial,sans-serif;font-size:14px;font-weight:400;line-height:1.55;letter-spacing:-.02em}.policy-copy section{margin:0 0 28px}.policy-copy h2{margin:0 0 10px;color:var(--ink);font-size:16px;line-height:1.5;font-weight:700}.policy-copy p{margin:0 0 10px}.policy-copy ol,.policy-copy ul{margin:0;padding-left:24px}.policy-copy li{padding-left:2px}.policy-copy li+li{margin-top:0}
+.policy-copy .policy-contact p{margin-bottom:4px}
+@media(max-width:720px){.policy-heading{margin-bottom:52px}.policy-tabs{gap:24px;overflow-x:auto}.policy-tab{font-size:15px;white-space:nowrap}.policy-pane{padding-top:36px}.policy-copy{font-size:13px;line-height:1.7}.policy-copy h2{font-size:16px}.policy-copy section{margin-bottom:32px}.policy-section{padding-bottom:96px}}
